@@ -6,6 +6,26 @@ body.style.backgroundSize = 'cover';
 body.style.backgroundPosition = 'center';
 body.style.backgroundRepeat = 'no-repeat';
 
+// // Create the "Return to Portfolio" button (this part is key)
+const containerButton = document.createElement("div");
+containerButton.classList.add("containerReturn");
+body.appendChild(containerButton);
+
+const returnButton = document.createElement('button');
+returnButton.textContent = "Return to Portfolio";
+returnButton.classList.add('buttonReturn');
+containerButton.appendChild(returnButton);
+
+// Add event listener for returning to the portfolio
+returnButton.addEventListener("click", returnPortfolio);
+
+//funtion return to Portfolio
+function returnPortfolio() {
+  window.location.href = "https://javyprogrameitor.github.io/Portfolio/";
+}
+
+
+
 // Create the result container
 let resultElement = document.createElement('h1');
 resultElement.innerText = 'Waiting for input...'; // Initial text
